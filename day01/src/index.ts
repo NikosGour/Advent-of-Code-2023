@@ -4,7 +4,7 @@ const data = fs.readFileSync(`input.txt`, `utf-8`).split(`\n`);
 const part1 = ():number => {
 	let acc = 0;
 	for (const line of data) {
-		console.log(line);
+		// console.log(line);
 		const numbers = line.split(``)
 			.filter((c) => { return !isNaN(+c); });
 		acc += +(numbers[ 0 ]! + numbers[ numbers.length - 1 ]);
@@ -12,6 +12,17 @@ const part1 = ():number => {
 	return acc;
 };
 const part2 = ():number => {
+	function findAllOverlappingMatches(pattern:RegExp, text:string) {
+		const regex = new RegExp(pattern, `g`);
+		const matches = [];
+		let match;
+		while ((match = regex.exec(text)) !== null) {
+			matches.push(match[ 0 ]);
+			regex.lastIndex = match.index + 1;
+		}
+		return matches;
+	}
+
 	let res = 0;
 	const number_string = {
 		one   : 1,
@@ -27,10 +38,11 @@ const part2 = ():number => {
 
 	for (const i in data){
 		const line = data[ i ]!;
-		const matches = line.match(/(?=(one)|(two)|(three)|(four)|(five)|(six)|(seven)|(eight)|(nine)|(\d))/g);
-		console.log(matches);
+		const regex = /one|two|three|four|five|six|seven|eight|nine|\d/g;
+		const matches = findAllOverlappingMatches(regex, line);
+		// console.log(matches);
 		if (matches){
-			const first = matches[ 0 ];
+			const first = matches[ 0 ]!;
 			const last = matches[ matches.length - 1 ]!;
 			// console.log(i);
 			// console.log(`Found first: ${first}`);
@@ -54,7 +66,7 @@ const part2 = ():number => {
 			// console.log(final);
 			const res_bef = res;
 			res += final;
-			console.log(`${res}=${res_bef}+${final}`);
+			// console.log(`${res}=${res_bef}+${final}`);
 		}
 	}
 	return res;
@@ -63,3 +75,4 @@ const part2 = ():number => {
 // console.log(part1());
 //54390
 console.log(part2());
+//54277
