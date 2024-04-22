@@ -1,0 +1,26 @@
+{
+  "name": "day02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon bin/index.js",
+    "clean": "rm -rf bin;tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^1.7.2",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-file-extension-in-import-ts": "^2.1.0",
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "@types/node": "^20.12.7"
+  }
+}
