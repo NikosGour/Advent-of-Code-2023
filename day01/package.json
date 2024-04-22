@@ -18,5 +18,8 @@
     "eslint": "^8.57.0",
     "eslint-plugin-file-extension-in-import-ts": "^2.1.0",
     "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "@types/node": "^20.12.7"
   }
 }
