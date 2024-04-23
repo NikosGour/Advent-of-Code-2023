@@ -138,7 +138,7 @@
         "@stylistic/object-property-newline": [ "warn" ],
         "@stylistic/operator-linebreak": [ "warn", "after" ],
         "@stylistic/quotes": [ "warn", "backtick" ],
-        "@stylistic/rest-spread-spacing": [ "warn", "always" ],
+        "@stylistic/rest-spread-spacing": [ "warn", "never" ],
         "@stylistic/semi": [ "warn", "always" ],
         "@stylistic/semi-spacing": [ "error", 
             { "before": false, 
