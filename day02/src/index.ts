@@ -9,14 +9,6 @@ const part2 = ():number => { return 0; };
 class nikos{
 	constructor(){
 
-	}
-
-	public peos(){}
-
-	public peos2(){}
-
-	public peos3(){}
-}
-
-// part1();
+// console.log(part1());
+// 2105
 // part2();
