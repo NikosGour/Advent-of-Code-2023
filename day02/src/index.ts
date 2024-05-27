@@ -36,6 +36,6 @@ const part1 = ():number => {
 };
 const part2 = ():number => { return 0; };
 
-console.log(part1());
+// console.log(part1());
 // 2105
 // part2();
